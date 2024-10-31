@@ -19,7 +19,7 @@ export const createLesson = async (
 			content
 		);
 		if (!newLesson) {
-			res.status(404).json(response("error", "Lesson not found", null));
+			res.status(404).json(response("error", "Module not found", null));
 			return;
 		}
 

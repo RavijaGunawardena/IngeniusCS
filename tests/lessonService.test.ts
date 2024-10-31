@@ -106,6 +106,32 @@ describe("Lesson Service", () => {
 		expect(totalPages).toBe(1);
 	});
 
+	test("should not creaet a lesson for a non-existing module", async () => {
+		(fs.readFile as jest.Mock).mockResolvedValueOnce(
+			JSON.stringify(mockLessons)
+		);
+		(fs.writeFile as jest.Mock).mockResolvedValueOnce(undefined);
+		(fs.readFile as jest.Mock).mockResolvedValueOnce(
+			JSON.stringify(mockModules)
+		);
+
+		const newLesson = await createLesson(
+			uuidv4(),
+			"JavaScript Basics",
+			"Learn the fundamentals of JavaScript.",
+			["Variables", "Data Types", "Functions"],
+			[
+				{
+					type: "text",
+					data: "JavaScript is a versatile programming language.",
+				},
+				{ type: "video", data: "https://example.com/js-basics" },
+			]
+		);
+
+		expect(newLesson).toBeNull();
+	});
+
 	test("should get lesson by ID", async () => {
 		(fs.readFile as jest.Mock).mockResolvedValueOnce(
 			JSON.stringify(mockLessons)
@@ -170,24 +196,4 @@ describe("Lesson Service", () => {
 
 		expect(lesson).toBeUndefined();
 	});
-
-	// test("should not create a lesson with empty title", async () => {
-	// 	(fs.readFile as jest.Mock).mockResolvedValueOnce(
-	// 		JSON.stringify(mockLessons)
-	// 	);
-	// 	(fs.writeFile as jest.Mock).mockResolvedValueOnce(undefined);
-	// 	(fs.readFile as jest.Mock).mockResolvedValueOnce(
-	// 		JSON.stringify(mockModules)
-	// 	);
-
-	// 	await expect(
-	// 		createLesson(
-	// 			mockLessons[0].moduleId,
-	// 			"",
-	// 			"Description",
-	// 			["Sample topic"],
-	// 			[{ type: "text", data: "Sample content" }]
-	// 		)
-	// 	).rejects.toThrow("Title cannot be empty.");
-	// });
 });

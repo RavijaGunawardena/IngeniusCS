@@ -40,6 +40,8 @@ const router = express.Router();
  *     responses:
  *       201:
  *         description: The course was successfully created
+ *       400:
+ *         description: Invalid request body
  *       500:
  *         description: Internal server error
  */
@@ -147,6 +149,8 @@ router.get("/:id", validateRequest(getCourseByIdSchema), getCourseById);
  *     responses:
  *       200:
  *         description: The updated course object
+ *       400:
+ *         description: Invalid request body
  *       404:
  *         description: Course not found
  *       500:

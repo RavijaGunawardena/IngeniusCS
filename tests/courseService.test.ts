@@ -3,28 +3,70 @@ import {
 	deleteCourse,
 	getCourseById,
 	getCourses,
+	getCoursesWithDetails,
 	updateCourse,
 } from "../src/services/courseService";
 import * as fs from "fs/promises";
 import { Course } from "../src/models/Course";
-import { v4 as uuidv4 } from "uuid"; // Import UUID generation
+import { v4 as uuidv4 } from "uuid";
+import { Module } from "../src/models/Module";
+import { Lesson } from "../src/models/Lesson";
 
 jest.mock("fs/promises");
 
 const mockCourses: Course[] = [
 	{
-		id: uuidv4(),
+		id: '1',
 		title: "Introduction to JavaScript",
 		description:
 			"Learn the fundamentals of JavaScript, the programming language of the web.",
 		moduleIds: [],
 	},
 	{
-		id: uuidv4(),
+		id: '2',
 		title: "Advanced CSS Techniques",
 		description:
 			"Explore advanced CSS techniques for building responsive layouts.",
 		moduleIds: [],
+	},
+];
+
+const mockLessons: Lesson[] = [
+	{
+		id: '1',
+		title: "Introduction to HTML",
+		description: "Learn the basics of HTML, the structure of web pages.",
+		topics: ["HTML Structure", "Tags", "Attributes"],
+		content: [
+			{
+				type: "text",
+				data: "HTML is the standard markup language for web pages.",
+			},
+		],
+		moduleId: "c386fd6f-003c-44ef-a99b-61072ac18121",
+	},
+	{
+		id: '2',
+		title: "CSS Fundamentals",
+		description: "Understand how to style your web pages using CSS.",
+		topics: ["Selectors", "Box Model", "Flexbox"],
+		content: [{ type: "video", data: "https://example.com/css-fundamentals" }],
+		moduleId: "c386fd6f-003c-44ef-a99b-61072ac18121",
+	},
+];
+
+const mockModules: Module[] = [
+	{
+		id: "c386fd6f-003c-44ef-a99b-61072ac18121",
+		title: "Web Development Basics",
+		courseId: "1",
+		lessonIds: [],
+	},
+	{
+		id: "c386fd6f-003c-44ef-a99b-61072ac18121",
+		title: "Web Development Basics 2",
+		courseId: "2",
+		lessonIds: [],
 	},
 ];
 
@@ -61,6 +103,25 @@ describe("Course Service", () => {
 		const { courses, totalCourses, totalPages } = await getCourses(1, 2);
 
 		expect(courses).toEqual(mockCourses);
+		expect(totalCourses).toBe(2);
+		expect(totalPages).toBe(1);
+	});
+
+	test("should get more details of all courses with pagination", async () => {
+		(fs.readFile as jest.Mock).mockResolvedValueOnce(
+			JSON.stringify(mockCourses)
+		);
+		(fs.writeFile as jest.Mock).mockResolvedValueOnce(undefined);
+		(fs.readFile as jest.Mock).mockResolvedValueOnce(
+			JSON.stringify(mockModules)
+		);
+		(fs.readFile as jest.Mock).mockResolvedValueOnce(
+			JSON.stringify(mockLessons)
+		);
+
+		const { totalCourses, totalPages } =
+			await getCoursesWithDetails(1, 2);
+
 		expect(totalCourses).toBe(2);
 		expect(totalPages).toBe(1);
 	});
@@ -116,14 +177,4 @@ describe("Course Service", () => {
 
 		expect(course).toBeUndefined();
 	});
-
-	// test("should not create a course with empty title", async () => {
-	// 	(fs.readFile as jest.Mock).mockResolvedValueOnce(
-	// 		JSON.stringify(mockCourses)
-	// 	);
-
-	// 	await expect(createCourse("", "Description")).rejects.toThrow(
-	// 		"Title cannot be empty."
-	// 	);
-	// });
 });

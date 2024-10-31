@@ -82,6 +82,20 @@ describe("Module Service", () => {
 		expect(totalPages).toBe(1);
 	});
 
+	test("should not creaet a module for a non-existing course", async () => {
+		(fs.readFile as jest.Mock).mockResolvedValueOnce(
+			JSON.stringify(mockModules)
+		);
+		(fs.writeFile as jest.Mock).mockResolvedValueOnce(undefined);
+		(fs.readFile as jest.Mock).mockResolvedValueOnce(
+			JSON.stringify(mockCourses)
+		);
+
+		const newModule = await createModule(uuidv4(), "React Fundamentals");
+
+		expect(newModule).toBeNull();
+	});
+
 	test("should update an existing module", async () => {
 		(fs.readFile as jest.Mock).mockResolvedValueOnce(
 			JSON.stringify(mockModules)

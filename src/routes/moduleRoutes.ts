@@ -35,6 +35,12 @@ const router = express.Router();
  *     responses:
  *       201:
  *         description: Module created successfully
+ *       400:
+ *         description: Invalid request body
+ *       404:
+ *         description: Course not found associated with module
+ *       500:
+ *         description: Internal server error
  */
 router.post("/", validateRequest(createModuleSchema), createModule);
 
@@ -61,6 +67,8 @@ router.post("/", validateRequest(createModuleSchema), createModule);
  *     responses:
  *       200:
  *         description: Modules retrieved successfully
+ *       500:
+ *         description: Internal server error
  */
 router.get("/", validateRequest(getModulesSchema), getModules);
 
@@ -94,6 +102,13 @@ router.get("/", validateRequest(getModulesSchema), getModules);
  *     responses:
  *       200:
  *         description: Module updated successfully
+ *       400:
+ *         description: Invalid request body
+ *       404:
+ *         description: Module not found
+ *       500:
+ *         description: Internal server error
+ *
  */
 router.put("/:id", validateRequest(updateModuleSchema), updateModule);
 
@@ -118,6 +133,10 @@ router.put("/:id", validateRequest(updateModuleSchema), updateModule);
  *     responses:
  *       204:
  *         description: Module deleted successfully
+ *       404:
+ *         description: Module not found
+ *       500:
+ *         description: Internal server error
  */
 router.delete("/:id", validateRequest(deleteModuleSchema), deleteModule);
 
