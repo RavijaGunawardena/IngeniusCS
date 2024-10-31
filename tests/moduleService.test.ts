@@ -1,6 +1,6 @@
 import * as fs from "fs/promises";
 import { Module } from "../src/models/Module";
-import { v4 as uuidv4 } from "uuid"; // Import UUID generation
+import { v4 as uuidv4 } from "uuid";
 import {
 	createModule,
 	deleteModule,
@@ -8,7 +8,6 @@ import {
 	updateModule,
 } from "../src/services/moduleService";
 
-// Mocking the file system methods
 jest.mock("fs/promises");
 
 const mockCourses = [

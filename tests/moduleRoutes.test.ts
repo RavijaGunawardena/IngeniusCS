@@ -1,80 +1,12 @@
-// // moduleRoutes.test.ts
-
-// import request from "supertest";
-// import express from "express";
-// import { json } from "body-parser";
-// import moduleRoutes from "../src/routes/moduleRoutes";
-
-// const app = express();
-// app.use(json());
-// app.use("/modules", moduleRoutes);
-
-// // jest.mock("../src/services/moduleService"); // Uncomment to mock service methods
-
-// describe("Module Routes", () => {
-// 	beforeEach(() => {
-// 		jest.clearAllMocks();
-// 	});
-
-// 	test("POST /modules - should create a new module", async () => {
-// 		// (writeModulesToFile as jest.Mock).mockResolvedValueOnce(undefined);
-
-// 		const response = await request(app).post("/modules").send({
-// 			courseId: "courseId1",
-// 			title: "New Module",
-// 		});
-
-// 		expect(response.status).toBe(201);
-// 		// expect(response.body).toEqual({
-// 		// 	status: "success",
-// 		// 	message: "Module created successfully",
-// 		// });
-// 	});
-
-// 	test("GET /modules - should retrieve all modules for a specific course", async () => {
-// 		// (writeModulesToFile as jest.Mock).mockResolvedValueOnce(undefined);
-
-// 		const response = await request(app).get(
-// 			"/modules?courseId=courseId1&page=1&limit=10"
-// 		);
-
-// 		expect(response.status).toBe(200);
-// 		// expect(response.body).toHaveProperty('data'); // Uncomment for additional checks
-// 	});
-
-// 	test("PUT /modules/:id - should update a module", async () => {
-// 		const response = await request(app)
-// 			.put("/modules/1?courseId=courseId1")
-// 			.send({
-// 				title: "Updated Module",
-// 			});
-
-// 		expect(response.status).toBe(200);
-// 		expect(response.body).toHaveProperty(
-// 			"message",
-// 			"Module updated successfully"
-// 		);
-// 	});
-
-// 	test("DELETE /modules/:id - should delete a module", async () => {
-// 		const response = await request(app).delete("/modules/1?courseId=courseId1");
-
-// 		expect(response.status).toBe(204);
-// 	});
-// });
-
 import request from "supertest";
 import express from "express";
 import { json } from "body-parser";
 import moduleRoutes from "../src/routes/moduleRoutes";
 
-import { v4 as uuidv4 } from "uuid";
-
 const app = express();
 app.use(json());
 app.use("/modules", moduleRoutes);
 
-// const randomCourseId = uuidv4();
 
 describe("Module Routes", () => {
 	beforeEach(() => {

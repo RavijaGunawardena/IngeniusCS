@@ -1,6 +1,6 @@
 import * as fs from "fs/promises";
 import { Lesson } from "../src/models/Lesson";
-import { v4 as uuidv4 } from "uuid"; // Import UUID generation
+import { v4 as uuidv4 } from "uuid";
 import {
 	createLesson,
 	deleteLesson,
