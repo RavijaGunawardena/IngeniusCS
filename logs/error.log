@@ -1,0 +1,20 @@
+{"level":"error","message":"Error retrieving courses: TypeError: Cannot destructure property 'courses' of '(intermediate value)' as it is undefined.","timestamp":"2024-10-30T17:24:31.029Z"}
+{"level":"error","message":"Error retrieving courses: TypeError: Cannot destructure property 'courses' of '(intermediate value)' as it is undefined.","timestamp":"2024-10-30T17:25:21.979Z"}
+{"level":"error","message":"Error retrieving courses: TypeError: Cannot destructure property 'courses' of '(intermediate value)' as it is undefined.","timestamp":"2024-10-30T17:31:28.127Z"}
+{"level":"error","message":"Error retrieving courses: TypeError: Cannot destructure property 'courses' of '(intermediate value)' as it is undefined.","timestamp":"2024-10-30T17:33:32.929Z"}
+{"level":"error","message":"Error retrieving courses: TypeError: Cannot destructure property 'courses' of '(intermediate value)' as it is undefined.","timestamp":"2024-10-30T17:42:16.773Z"}
+{"level":"error","message":"Error retrieving courses: TypeError: Cannot destructure property 'courses' of '(intermediate value)' as it is undefined.","timestamp":"2024-10-30T17:46:02.927Z"}
+{"level":"error","message":"Error retrieving courses: TypeError: Cannot destructure property 'courses' of '(intermediate value)' as it is undefined.","timestamp":"2024-10-30T17:53:48.932Z"}
+{"level":"error","message":"Error retrieving courses: TypeError: Cannot destructure property 'courses' of '(intermediate value)' as it is undefined.","timestamp":"2024-10-30T18:20:59.252Z"}
+{"level":"error","message":"Error retrieving courses: TypeError: Cannot destructure property 'courses' of '(intermediate value)' as it is undefined.","timestamp":"2024-10-30T18:21:49.220Z"}
+{"level":"error","message":"Error retrieving courses: TypeError: Cannot destructure property 'courses' of '(intermediate value)' as it is undefined.","timestamp":"2024-10-30T18:23:35.636Z"}
+{"level":"error","message":"Error retrieving courses: TypeError: Cannot destructure property 'courses' of '(intermediate value)' as it is undefined.","timestamp":"2024-10-30T18:26:08.221Z"}
+{"level":"error","message":"Error retrieving modules: SyntaxError: Unexpected non-whitespace character after JSON at position 1094 (line 41 column 2)","timestamp":"2024-10-31T08:49:58.930Z"}
+{"level":"error","message":"Error updating module: SyntaxError: Unexpected non-whitespace character after JSON at position 1094 (line 41 column 2)","timestamp":"2024-10-31T08:49:59.000Z"}
+{"level":"error","message":"Error deleting module: SyntaxError: Unexpected non-whitespace character after JSON at position 1094 (line 41 column 2)","timestamp":"2024-10-31T08:49:59.013Z"}
+{"level":"error","message":"Error creating lesson: SyntaxError: Unexpected non-whitespace character after JSON at position 1094 (line 41 column 2)","timestamp":"2024-10-31T09:24:48.948Z"}
+{"level":"error","message":"Error creating lesson: SyntaxError: Unexpected non-whitespace character after JSON at position 1094 (line 41 column 2)","timestamp":"2024-10-31T09:25:16.740Z"}
+{"level":"error","message":"POST /lessons - Expected property name or '}' in JSON at position 6 (line 2 column 5)","timestamp":"2024-10-31T09:26:21.985Z"}
+{"level":"error","message":"POST /lessons - Expected property name or '}' in JSON at position 3 (line 2 column 2)","timestamp":"2024-10-31T09:27:59.785Z"}
+{"level":"error","message":"Error creating lesson: SyntaxError: Unexpected non-whitespace character after JSON at position 1094 (line 41 column 2)","timestamp":"2024-10-31T09:28:25.025Z"}
+{"level":"error","message":"Error creating lesson: SyntaxError: Unexpected non-whitespace character after JSON at position 1094 (line 41 column 2)","timestamp":"2024-10-31T09:29:23.819Z"}

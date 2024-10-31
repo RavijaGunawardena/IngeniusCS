@@ -1,0 +1,59 @@
+[
+  {
+    "id": "a69c702b-2e19-408a-be0b-d66e2e41bf4c",
+    "title": "Advanced JavaScript Concepts",
+    "description": "Deep dive into JavaScript.",
+    "topics": [
+      "Closures",
+      "Promises",
+      "Async/Await"
+    ],
+    "content": [
+      {
+        "type": "text",
+        "data": "JavaScript closures are powerful."
+      },
+      {
+        "type": "video",
+        "data": "https://example.com/advanced-js"
+      }
+    ],
+    "moduleId": "c386fd6f-003c-44ef-a99b-61072ac18121"
+  },
+  {
+    "id": "1f4c42f7-2647-48b9-b1e7-d8d6eab9278e",
+    "title": "Advanced JavaScript Concepts",
+    "description": "Deep dive into JavaScript.",
+    "topics": [
+      "Closures",
+      "Promises",
+      "Async/Await"
+    ],
+    "content": [
+      {
+        "type": "text",
+        "data": "JavaScript closures are powerful."
+      },
+      {
+        "type": "video",
+        "data": "https://example.com/advanced-js"
+      }
+    ],
+    "moduleId": "c386fd6f-003c-44ef-a99b-61072ac18121"
+  },
+  {
+    "id": "c01766f5-5e3b-4040-ad64-f019da373f95",
+    "title": "Introduction to Programming",
+    "description": "This lesson covers the basics of programming.",
+    "topics": [
+      "variables"
+    ],
+    "content": [
+      {
+        "type": "text",
+        "data": "This is the lesson content."
+      }
+    ],
+    "moduleId": "c386fd6f-003c-44ef-a99b-61072ac18121"
+  }
+]
