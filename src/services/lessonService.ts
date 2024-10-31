@@ -7,7 +7,7 @@ import { Lesson } from "../models/Lesson";
 const lessonDataFilePath = path.join(__dirname, "../data/lessons.json");
 
 // Helper to read lessons from JSON file
-const readLessonsFromFile = async (): Promise<Lesson[]> => {
+export const readLessonsFromFile = async (): Promise<Lesson[]> => {
 	const fileData = await fs.readFile(lessonDataFilePath, "utf-8");
 	return JSON.parse(fileData);
 };

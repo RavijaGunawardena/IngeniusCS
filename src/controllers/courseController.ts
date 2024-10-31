@@ -64,6 +64,55 @@ export const getCourses = async (
 	}
 };
 
+export const getCoursesWithMoreDetails = async (
+	req: Request,
+	res: Response
+): Promise<void> => {
+	try {
+		const cacheKey = `courses_details_page_${req.query.page}_limit_${req.query.limit}`;
+		const cachedCourses = getCache(cacheKey);
+
+		if (cachedCourses) {
+			res
+				.status(200)
+				.json(
+					response(
+						"success",
+						"Courses with more details retrieved from cache",
+						cachedCourses
+					)
+				);
+			return;
+		}
+
+		const page = parseInt(req.query.page as string) || 1;
+		const limit = parseInt(req.query.limit as string) || 10;
+		const { paginatedCourses, totalCourses, totalPages } =
+			await courseService.getCoursesWithDetails(page, limit);
+
+		const responseData = {
+			page,
+			limit,
+			totalCourses,
+			totalPages,
+			data: paginatedCourses,
+		};
+		setCache(cacheKey, responseData, 60000);
+		res
+			.status(200)
+			.json(
+				response(
+					"success",
+					"Courses with more details retrieved successfully",
+					responseData
+				)
+			);
+	} catch (error) {
+		logger.error(`Error retrieving courses with more details: ${error}`);
+		res.status(500).json(response("error", "Internal server error", null));
+	}
+};
+
 // GET Course by ID
 export const getCourseById = async (
 	req: Request,

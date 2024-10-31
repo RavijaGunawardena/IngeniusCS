@@ -5,6 +5,7 @@ import {
 	getCourseById,
 	updateCourse,
 	deleteCourse,
+	getCoursesWithMoreDetails,
 } from "../controllers/courseController";
 import { validateRequest } from "../middlewares/validateRequest";
 import {
@@ -68,6 +69,31 @@ router.post("/", validateRequest(createCourseSchema), createCourse);
  *         description: Internal server error
  */
 router.get("/", validateRequest(getCoursesSchema), getCourses);
+
+/**
+ * @swagger
+ * /courses/details:
+ *   get:
+ *     summary: Get all courses with more details
+ *     tags: [Courses]
+ *     parameters:
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *         description: Page number for pagination
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *         description: Number of courses per page
+ *     responses:
+ *       200:
+ *         description: A paginated list of courses with more details
+ *       500:
+ *         description: Internal server error
+ */
+router.get("/details", getCoursesWithMoreDetails);
 
 /**
  * @swagger
