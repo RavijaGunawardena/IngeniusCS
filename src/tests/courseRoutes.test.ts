@@ -38,7 +38,12 @@ describe("Course Routes", () => {
 	});
 
 	test("GET /courses/:id - should retrieve course by ID", async () => {
-		const courseId = "81b64bbf-cdf4-43ee-af58-870e5b666929";
+		const courseResponse = await request(app).post("/courses").send({
+			title: "Full Stack Development",
+			description: "Comprehensive course on full stack development.",
+		});
+
+		const courseId = courseResponse.body.payload.id;
 
 		const response = await request(app).get(`/courses/${courseId}`);
 
@@ -47,7 +52,12 @@ describe("Course Routes", () => {
 	});
 
 	test("PUT /courses/:id - should update a course", async () => {
-		const courseId = "81b64bbf-cdf4-43ee-af58-870e5b666929";
+		const courseResponse = await request(app).post("/courses").send({
+			title: "Full Stack Development",
+			description: "Comprehensive course on full stack development.",
+		});
+
+		const courseId = courseResponse.body.payload.id;
 
 		const response = await request(app).put(`/courses/${courseId}`).send({
 			title: "Updated React Course",
