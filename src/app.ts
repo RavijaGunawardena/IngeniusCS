@@ -13,9 +13,10 @@ import { rateLimiter } from "./middlewares/rateLimiter";
 const app = express();
 
 // Middleware
-app.use(json());
 app.use(requestLogger);
 app.use(rateLimiter);
+
+app.use(json());
 
 // Swagger configuration
 const swaggerOptions = {

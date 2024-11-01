@@ -1,7 +1,7 @@
 import request from "supertest";
 import express from "express";
 import { json } from "body-parser";
-import lessonRoutes from "../src/routes/lessonRoutes";
+import lessonRoutes from "../routes/lessonRoutes";
 
 const app = express();
 app.use(json());

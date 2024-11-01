@@ -1,48 +1,23 @@
 [
-  {
-    "id": "c386fd6f-003c-44ef-a99b-61072ac18121",
-    "title": "Node.js Basics",
-    "courseId": "80c8bb88-ca57-4f2a-a7a4-bd28774c22ec",
-    "lessonIds": [
-      "a69c702b-2e19-408a-be0b-d66e2e41bf4c",
-      "1f4c42f7-2647-48b9-b1e7-d8d6eab9278e",
-      "c01766f5-5e3b-4040-ad64-f019da373f95"
-    ]
-  },
-  {
-    "id": "e85e4ecc-b3df-46de-b1ae-43da86926bdb",
-    "title": "Node.js Basics",
-    "courseId": "80c8bb88-ca57-4f2a-a7a4-bd28774c22ec",
-    "lessonIds": []
-  },
-  {
-    "id": "e7753308-049f-44c6-9ae9-e7e04c9994fb",
-    "title": "Node.js Basics",
-    "courseId": "80c8bb88-ca57-4f2a-a7a4-bd28774c22ec",
-    "lessonIds": []
-  },
-  {
-    "id": "a1c795fb-b4d5-4284-adbd-227524165409",
-    "title": "Node.js Basics",
-    "courseId": "80c8bb88-ca57-4f2a-a7a4-bd28774c22ec",
-    "lessonIds": []
-  },
-  {
-    "id": "710c4318-96c6-43e3-ac9e-387d56d441d8",
-    "title": "Node.js Basics",
-    "courseId": "80c8bb88-ca57-4f2a-a7a4-bd28774c22ec",
-    "lessonIds": []
-  },
-  {
-    "id": "8a0b0435-bd4e-4aa5-b8c4-715c43b09dc7",
-    "title": "Node.js Basics",
-    "courseId": "80c8bb88-ca57-4f2a-a7a4-bd28774c22ec",
-    "lessonIds": []
-  },
-  {
-    "id": "ca70b774-c1a4-43f5-bad6-abcf4304e0ec",
-    "title": "The test data",
-    "courseId": "b7a6206a-5b84-401a-a569-202b1a180de1",
-    "lessonIds": []
-  }
+	{
+		"id": "c386fd6f-003c-44ef-a99b-61072ac18121",
+		"title": "React State Management",
+		"courseId": "80c8bb88-ca57-4f2a-a7a4-bd28774c22ec",
+		"lessonIds": [
+			"b53b742c-1234-4a3f-bcdf-27de34ff55a2",
+			"d75f5e69-676e-479e-b672-cd4b1f28a988"
+		]
+	},
+	{
+		"id": "e85e4ecc-b3df-46de-b1ae-43da86926bdb",
+		"title": "React Hooks",
+		"courseId": "80c8bb88-ca57-4f2a-a7a4-bd28774c22ec",
+		"lessonIds": []
+	},
+	{
+		"id": "ca70b774-c1a4-43f5-bad6-abcf4304e0ec",
+		"title": "Web Development Fundamentals",
+		"courseId": "b7a6206a-5b84-401a-a569-202b1a180de1",
+		"lessonIds": ["aa14f69f-ef76-4bc8-b6e2-6a9459d4557b"]
+	}
 ]

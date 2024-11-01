@@ -1,59 +1,46 @@
 [
-  {
-    "id": "a69c702b-2e19-408a-be0b-d66e2e41bf4c",
-    "title": "Advanced JavaScript Concepts",
-    "description": "Deep dive into JavaScript.",
-    "topics": [
-      "Closures",
-      "Promises",
-      "Async/Await"
-    ],
-    "content": [
-      {
-        "type": "text",
-        "data": "JavaScript closures are powerful."
-      },
-      {
-        "type": "video",
-        "data": "https://example.com/advanced-js"
-      }
-    ],
-    "moduleId": "c386fd6f-003c-44ef-a99b-61072ac18121"
-  },
-  {
-    "id": "1f4c42f7-2647-48b9-b1e7-d8d6eab9278e",
-    "title": "Advanced JavaScript Concepts",
-    "description": "Deep dive into JavaScript.",
-    "topics": [
-      "Closures",
-      "Promises",
-      "Async/Await"
-    ],
-    "content": [
-      {
-        "type": "text",
-        "data": "JavaScript closures are powerful."
-      },
-      {
-        "type": "video",
-        "data": "https://example.com/advanced-js"
-      }
-    ],
-    "moduleId": "c386fd6f-003c-44ef-a99b-61072ac18121"
-  },
-  {
-    "id": "c01766f5-5e3b-4040-ad64-f019da373f95",
-    "title": "Introduction to Programming",
-    "description": "This lesson covers the basics of programming.",
-    "topics": [
-      "variables"
-    ],
-    "content": [
-      {
-        "type": "text",
-        "data": "This is the lesson content."
-      }
-    ],
-    "moduleId": "c386fd6f-003c-44ef-a99b-61072ac18121"
-  }
+	{
+		"id": "b53b742c-1234-4a3f-bcdf-27de34ff55a2",
+		"title": "Understanding React State",
+		"description": "Learn how to manage state in your React applications.",
+		"topics": ["State Management", "React Components", "Props vs State"],
+		"content": [
+			{
+				"type": "text",
+				"data": "State in React is used to hold data that can change over time."
+			},
+			{
+				"type": "video",
+				"data": "https://example.com/state-management-video"
+			}
+		]
+	},
+	{
+		"id": "d75f5e69-676e-479e-b672-cd4b1f28a988",
+		"title": "Using Context API",
+		"description": "Explore the Context API to manage global state in your application.",
+		"topics": ["Context API", "Global State Management", "React Hooks"],
+		"content": [
+			{
+				"type": "text",
+				"data": "The Context API allows you to pass data through the component tree without having to pass props down manually at every level."
+			}
+		]
+	},
+	{
+		"id": "aa14f69f-ef76-4bc8-b6e2-6a9459d4557b",
+		"title": "HTML Basics",
+		"description": "Learn about HTML structure and essential tags.",
+		"topics": ["HTML Tags", "Document Structure", "Semantic HTML"],
+		"content": [
+			{
+				"type": "text",
+				"data": "HTML (HyperText Markup Language) is the standard markup language for creating web pages."
+			},
+			{
+				"type": "video",
+				"data": "https://example.com/html-basics-video"
+			}
+		]
+	}
 ]

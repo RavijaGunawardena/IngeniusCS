@@ -1,5 +1,5 @@
 import * as fs from "fs/promises";
-import { Lesson } from "../src/models/Lesson";
+import { Lesson } from "../models/Lesson";
 import { v4 as uuidv4 } from "uuid";
 import {
 	createLesson,
@@ -7,8 +7,8 @@ import {
 	getLessonById,
 	getLessons,
 	updateLesson,
-} from "../src/services/lessonService";
-import { Module } from "../src/models/Module";
+} from "../services/lessonService";
+import { Module } from "../models/Module";
 
 jest.mock("fs/promises");
 

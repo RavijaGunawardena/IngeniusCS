@@ -44,7 +44,7 @@ export const createLessonSchema = Joi.object({
 	}),
 });
 
-// Schema for getting lessons (includes pagination and moduleId query param)
+// Schema for getting lessons
 export const getLessonsSchema = Joi.object({
 	moduleId: Joi.string().uuid().required().messages({
 		"string.base": "Module ID must be a string.",

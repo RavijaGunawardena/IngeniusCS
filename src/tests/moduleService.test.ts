@@ -1,24 +1,27 @@
 import * as fs from "fs/promises";
-import { Module } from "../src/models/Module";
+import { Module } from "../models/Module";
 import { v4 as uuidv4 } from "uuid";
 import {
 	createModule,
 	deleteModule,
 	getModules,
 	updateModule,
-} from "../src/services/moduleService";
+} from "../services/moduleService";
+import { Course } from "../models/Course";
 
 jest.mock("fs/promises");
 
-const mockCourses = [
+const mockCourses: Course[] = [
 	{
 		id: "1",
 		title: "Web Development Basics",
+		description: "",
 		moduleIds: [],
 	},
 	{
 		id: "2",
 		title: "Web Development Basics",
+		description: "",
 		moduleIds: [],
 	},
 ];

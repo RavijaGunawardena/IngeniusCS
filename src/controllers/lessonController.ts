@@ -63,7 +63,7 @@ export const getLessons = async (
 			totalPages,
 			data: lessons,
 		};
-		setCache(cacheKey, responseData, 60000); // Cache for 1 minute
+		setCache(cacheKey, responseData, 60000);
 		res
 			.status(200)
 			.json(

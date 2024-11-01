@@ -5,12 +5,12 @@ import {
 	getCourses,
 	getCoursesWithDetails,
 	updateCourse,
-} from "../src/services/courseService";
+} from "../services/courseService";
 import * as fs from "fs/promises";
-import { Course } from "../src/models/Course";
+import { Course } from "../models/Course";
 import { v4 as uuidv4 } from "uuid";
-import { Module } from "../src/models/Module";
-import { Lesson } from "../src/models/Lesson";
+import { Module } from "../models/Module";
+import { Lesson } from "../models/Lesson";
 
 jest.mock("fs/promises");
 

@@ -1,7 +1,7 @@
 import request from "supertest";
 import express from "express";
 import { json } from "body-parser";
-import courseRoutes from "../src/routes/courseRoutes";
+import courseRoutes from "../routes/courseRoutes";
 
 const app = express();
 app.use(json());
@@ -66,7 +66,7 @@ describe("Course Routes", () => {
 	});
 
 	test("DELETE /courses/:id - should delete a course", async () => {
-		const courseId = "81b64bbf-cdf4-43ee-af58-870e5b666929"; // Replace with a valid UUID
+		const courseId = "81b64bbf-cdf4-43ee-af58-870e5b666929";
 
 		const response = await request(app).delete(`/courses/${courseId}`);
 

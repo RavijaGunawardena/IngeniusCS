@@ -1,36 +1,29 @@
 [
-  {
-    "id": "80c8bb88-ca57-4f2a-a7a4-bd28774c22ec",
-    "title": "Advanced React Course",
-    "description": "Updated Advanced React Course",
-    "moduleIds": [
-      "c386fd6f-003c-44ef-a99b-61072ac18121",
-      "e85e4ecc-b3df-46de-b1ae-43da86926bdb",
-      "e7753308-049f-44c6-9ae9-e7e04c9994fb",
-      "a1c795fb-b4d5-4284-adbd-227524165409",
-      "710c4318-96c6-43e3-ac9e-387d56d441d8",
-      "8a0b0435-bd4e-4aa5-b8c4-715c43b09dc7",
-      "c26efbee-c003-45ef-861c-7227bd37e192"
-    ]
-  },
-  {
-    "id": "8739bac1-8d77-4ef0-9f2f-6984a35ce090",
-    "title": "React Basics",
-    "description": "Learn the basics of React.",
-    "moduleIds": []
-  },
-  {
-    "id": "b7a6206a-5b84-401a-a569-202b1a180de1",
-    "title": "React Basics",
-    "description": "Learn the basics of React.",
-    "moduleIds": [
-      "ca70b774-c1a4-43f5-bad6-abcf4304e0ec"
-    ]
-  },
-  {
-    "id": "4c0843b5-14de-46f1-af64-0126be8f3fd1",
-    "title": "Advanced web development",
-    "description": "Web development with advanced react js",
-    "moduleIds": []
-  }
+	{
+		"id": "80c8bb88-ca57-4f2a-a7a4-bd28774c22ec",
+		"title": "Advanced React Course",
+		"description": "Deep dive into React, covering advanced concepts and best practices.",
+		"moduleIds": [
+			"c386fd6f-003c-44ef-a99b-61072ac18121",
+			"e85e4ecc-b3df-46de-b1ae-43da86926bdb"
+		]
+	},
+	{
+		"id": "8739bac1-8d77-4ef0-9f2f-6984a35ce090",
+		"title": "React Basics",
+		"description": "Learn the basics of React and build your first application.",
+		"moduleIds": []
+	},
+	{
+		"id": "b7a6206a-5b84-401a-a569-202b1a180de1",
+		"title": "Introduction to Web Development",
+		"description": "Fundamentals of web development including HTML, CSS, and JavaScript.",
+		"moduleIds": ["ca70b774-c1a4-43f5-bad6-abcf4304e0ec"]
+	},
+	{
+		"id": "4c0843b5-14de-46f1-af64-0126be8f3fd1",
+		"title": "Node.js for Beginners",
+		"description": "Get started with Node.js and learn how to build backend applications.",
+		"moduleIds": []
+	}
 ]
