@@ -13,7 +13,7 @@ export const readLessonsFromFile = async (): Promise<Lesson[]> => {
 };
 
 // Helper to write lessons to JSON file
-const writeLessonsToFile = async (lessons: Lesson[]): Promise<void> => {
+export const writeLessonsToFile = async (lessons: Lesson[]): Promise<void> => {
 	await fs.writeFile(lessonDataFilePath, JSON.stringify(lessons, null, 2));
 };
 

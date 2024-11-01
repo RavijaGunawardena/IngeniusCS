@@ -3,8 +3,8 @@ import path from "path";
 import { v4 as uuidv4 } from "uuid";
 import { Course } from "../models/Course";
 
-import { readModulesFromFile } from "./moduleService";
-import { readLessonsFromFile } from "./lessonService";
+import { readModulesFromFile, writeModulesToFile } from "./moduleService";
+import { readLessonsFromFile, writeLessonsToFile } from "./lessonService";
 
 const courseDataFilePath = path.join(__dirname, "../data/courses.json");
 
@@ -112,6 +112,19 @@ export const updateCourse = async (
 	return courses[courseIndex];
 };
 
+// // DELETE Course
+// export const deleteCourse = async (courseId: string): Promise<boolean> => {
+// 	const courses = await readCoursesFromFile();
+// 	const updatedCourses = courses.filter((course) => course.id !== courseId);
+
+// 	if (updatedCourses.length === courses.length) {
+// 		return false;
+// 	}
+
+// 	await writeCoursesToFile(updatedCourses);
+// 	return true;
+// };
+
 // DELETE Course
 export const deleteCourse = async (courseId: string): Promise<boolean> => {
 	const courses = await readCoursesFromFile();
@@ -119,6 +132,27 @@ export const deleteCourse = async (courseId: string): Promise<boolean> => {
 
 	if (updatedCourses.length === courses.length) {
 		return false;
+	}
+
+	const modules = await readModulesFromFile();
+	const lessons = await readLessonsFromFile();
+
+	const courseToDelete = courses.find((course) => course.id === courseId);
+	if (courseToDelete) {
+		const updatedModules = modules.filter(
+			(module) => !courseToDelete.moduleIds.includes(module.id)
+		);
+		await writeModulesToFile(updatedModules);
+
+		const updatedLessons = lessons.filter(
+			(lesson) =>
+				!courseToDelete.moduleIds.some((moduleId) =>
+					modules
+						.find((module) => module.id === moduleId)
+						?.lessonIds.includes(lesson.id)
+				)
+		);
+		await writeLessonsToFile(updatedLessons);
 	}
 
 	await writeCoursesToFile(updatedCourses);
