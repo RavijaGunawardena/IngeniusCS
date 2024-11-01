@@ -10,6 +10,8 @@ COPY . .
 
 RUN npm run build
 
+RUN mkdir -p dist/data && cp src/data/*.json dist/data/
+
 EXPOSE 3000
 
 CMD ["node", "dist/server.js"]
