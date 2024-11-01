@@ -112,19 +112,6 @@ export const updateCourse = async (
 	return courses[courseIndex];
 };
 
-// // DELETE Course
-// export const deleteCourse = async (courseId: string): Promise<boolean> => {
-// 	const courses = await readCoursesFromFile();
-// 	const updatedCourses = courses.filter((course) => course.id !== courseId);
-
-// 	if (updatedCourses.length === courses.length) {
-// 		return false;
-// 	}
-
-// 	await writeCoursesToFile(updatedCourses);
-// 	return true;
-// };
-
 // DELETE Course
 export const deleteCourse = async (courseId: string): Promise<boolean> => {
 	const courses = await readCoursesFromFile();
