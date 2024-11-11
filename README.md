@@ -24,7 +24,6 @@ The Course Management System is used to manage educational courses, including th
 - Node.js
 - Express.js
 - TypeScript
-- MongoDB (or your chosen database)
 - Joi for request validation
 - Winston for logging
 - Swagger for API documentation
